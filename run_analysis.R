@@ -49,5 +49,5 @@ run_analysis <- function () {
 	library(reshape2)
 	meltdata <- melt(dataextract, id.vars = c("subjectidentifier", "activitylabels", "activitynames"))
 	finaldata <- dcast(meltdata, subjectidentifier + activitylabels + activitynames ~ variable, fun.aggregate = mean)
-	write.table(finaldata, file = "CourseProject.txt")	
+	write.table(finaldata, file = "TidyDataSet.txt")	
 }
